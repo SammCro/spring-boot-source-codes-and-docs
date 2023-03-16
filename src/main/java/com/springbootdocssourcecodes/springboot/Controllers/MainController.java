@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class MainController {
     private Coach coach;
     @Autowired
-    public MainController(@Qualifier("footballCoach") Coach coach) {
+    public MainController(@Qualifier("swimCoach") Coach coach) {
+        System.out.println("MainController: inside no-arg constructor");
         this.coach = coach;
     }
     @GetMapping("/getDailyWorkout")

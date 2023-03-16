@@ -9,7 +9,6 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 @Component
-@Primary
 public class CricketCoach implements Coach{
     @PostConstruct
     public void init() {

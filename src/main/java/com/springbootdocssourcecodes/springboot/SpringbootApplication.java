@@ -7,6 +7,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import java.util.List;
+
 // all beans are initiliazed immediately
 // by Lazy annotation, beans are initialized when they are called
 // by Primary annotation, if there are multiple beans of the same type, the bean with the primary annotation is used
@@ -38,22 +40,60 @@ import org.springframework.context.annotation.Bean;
 public class SpringbootApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootApplication.class, args);
-
 	}
 	@Bean
 	public CommandLineRunner commandLineRunner(StudentDao studentDao) {
 		return runner -> {
 			createStudent(studentDao);
+			//readStudent(studentDao);
+			//readAllStudents(studentDao);
+			//findByLastName(studentDao);
+			//updateStudent(studentDao);
+			//deleteStudent(studentDao);
+			//deleteAllStudents(studentDao);
 		};
 	}
 
 	public void createStudent(StudentDao studentDao) {
 		Student student = new Student();
 		student.setFirstName("John");
-		student.setLastName("Doe");
+		student.setLastName("Ozturk");
 		student.setEmail("ilk.samett06@gmail.com");
 		studentDao.saveStudent(student);
 
-		System.out.println(student.getId());
+		System.out.println(student);
+	}
+	public void readStudent(StudentDao studentDao) {
+		Student student = studentDao.readStudent(1);
+		System.out.println(student);
+	}
+
+	public void readAllStudents(StudentDao studentDao) {
+		List<Student> students = studentDao.readAllStudents();
+		for(Student student: students) {
+			System.out.println(student);
+		}
+	}
+
+	public void findByLastName(StudentDao studentDao) {
+		Student student = studentDao.findByLastName("Ozturk");
+		System.out.println(student);
+	}
+
+	public void updateStudent(StudentDao studentDao) {
+		Student student = studentDao.readStudent(4);
+		student.setFirstName("Samet");
+		student.setLastName("Ozturk");
+
+		studentDao.updateStudent(student);
+
+		studentDao.readAllStudents().forEach(System.out::println);
+	}
+	public void deleteStudent(StudentDao studentDao) {
+		studentDao.deleteStudent(5);
+		studentDao.readAllStudents().forEach(System.out::println);
+	}
+	public void deleteAllStudents(StudentDao studentDao) {
+		System.out.println(studentDao.deleteAllStudents());
 	}
 }

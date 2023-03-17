@@ -1,8 +1,11 @@
 package com.springbootdocssourcecodes.springboot;
 
+import com.springbootdocssourcecodes.springboot.DAOs.StudentDao;
+import com.springbootdocssourcecodes.springboot.Models.Student;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
+import org.springframework.context.annotation.Bean;
 
 // all beans are initiliazed immediately
 // by Lazy annotation, beans are initialized when they are called
@@ -22,15 +25,35 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 // Singleton beans are thread safe
 // Singleton beans are eligible for @PostConstruct and @PreDestroy callbacks
 
-
 //ConfigurableBeanFactory.SCOPE_PROTOTYPE
 //ConfigurableBeanFactory.SCOPE_SINGLETON
 
+//You can define your own identifier generator by implementing the IdentifierGenerator interface.
+
+//We use Transactional annotation in the repository to make sure that
+//the database operations are performed in a transactional manner.
+
+
 @SpringBootApplication(scanBasePackages = "com.springbootdocssourcecodes.springboot")
 public class SpringbootApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootApplication.class, args);
+
+	}
+	@Bean
+	public CommandLineRunner commandLineRunner(StudentDao studentDao) {
+		return runner -> {
+			createStudent(studentDao);
+		};
 	}
 
+	public void createStudent(StudentDao studentDao) {
+		Student student = new Student();
+		student.setFirstName("John");
+		student.setLastName("Doe");
+		student.setEmail("ilk.samett06@gmail.com");
+		studentDao.saveStudent(student);
+
+		System.out.println(student.getId());
+	}
 }

@@ -1,8 +1,10 @@
-package com.springbootdocssourcecodes.springboot;
+package com.springbootdocssourcecodes.springboot.Entities;
+
+import com.springbootdocssourcecodes.springboot.Entities.Coach;
 
 public class SwimCoach implements Coach {
     public SwimCoach() {
-        System.out.println("SwimCoach: inside no-arg constructor");
+
     }
     @Override
     public String getDailyWorkout() {

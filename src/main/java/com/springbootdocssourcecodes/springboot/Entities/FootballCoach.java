@@ -1,4 +1,4 @@
-package com.springbootdocssourcecodes.springboot;
+package com.springbootdocssourcecodes.springboot.Entities;
 
 import org.springframework.stereotype.Component;
 

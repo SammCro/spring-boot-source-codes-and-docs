@@ -1,13 +1,10 @@
 package com.springbootdocssourcecodes.springboot;
 
-import com.springbootdocssourcecodes.springboot.DAOs.StudentDao;
-import com.springbootdocssourcecodes.springboot.Models.Student;
+import com.springbootdocssourcecodes.springboot.Part1.DAOs.StudentDao;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-
-import java.util.List;
 
 // all beans are initiliazed immediately
 // by Lazy annotation, beans are initialized when they are called
@@ -41,10 +38,12 @@ public class SpringbootApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootApplication.class, args);
 	}
+
+	/*
 	@Bean
 	public CommandLineRunner commandLineRunner(StudentDao studentDao) {
 		return runner -> {
-			createStudent(studentDao);
+			//createStudent(studentDao);
 			//readStudent(studentDao);
 			//readAllStudents(studentDao);
 			//findByLastName(studentDao);
@@ -53,7 +52,6 @@ public class SpringbootApplication {
 			//deleteAllStudents(studentDao);
 		};
 	}
-
 	public void createStudent(StudentDao studentDao) {
 		Student student = new Student();
 		student.setFirstName("John");
@@ -96,4 +94,5 @@ public class SpringbootApplication {
 	public void deleteAllStudents(StudentDao studentDao) {
 		System.out.println(studentDao.deleteAllStudents());
 	}
+	*/
 }

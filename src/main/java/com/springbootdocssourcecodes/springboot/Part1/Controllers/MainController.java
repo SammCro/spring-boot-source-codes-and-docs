@@ -1,4 +1,4 @@
-package com.springbootdocssourcecodes.springboot.Controllers;
+package com.springbootdocssourcecodes.springboot.Part1.Controllers;
 
 /*@RestController("/")
 public class MainController {

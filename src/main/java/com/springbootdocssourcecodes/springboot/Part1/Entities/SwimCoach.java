@@ -1,6 +1,4 @@
-package com.springbootdocssourcecodes.springboot.Entities;
-
-import com.springbootdocssourcecodes.springboot.Entities.Coach;
+package com.springbootdocssourcecodes.springboot.Part1.Entities;
 
 public class SwimCoach implements Coach {
     public SwimCoach() {

@@ -1,5 +1,6 @@
-package com.springbootdocssourcecodes.springboot.DAOs;
+package com.springbootdocssourcecodes.springboot.Part1.DAOs;
 
+import com.springbootdocssourcecodes.springboot.Part1.Models.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -7,7 +8,6 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 
-import com.springbootdocssourcecodes.springboot.Models.Student;
 import java.util.List;
 @Repository
 public class StudentDaoImpl implements StudentDao {

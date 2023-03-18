@@ -1,4 +1,4 @@
-package com.springbootdocssourcecodes.springboot.Models;
+package com.springbootdocssourcecodes.springboot.Part1.Models;
 
 import javax.persistence.*;
 

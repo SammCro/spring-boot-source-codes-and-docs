@@ -1,6 +1,7 @@
-package com.springbootdocssourcecodes.springboot.DAOs;
+package com.springbootdocssourcecodes.springboot.Part1.DAOs;
 
-import com.springbootdocssourcecodes.springboot.Models.Student;
+import com.springbootdocssourcecodes.springboot.Part1.Models.Student;
+
 import java.util.List;
 
 public interface StudentDao {

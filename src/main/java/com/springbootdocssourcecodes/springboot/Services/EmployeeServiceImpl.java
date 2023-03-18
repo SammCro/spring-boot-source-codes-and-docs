@@ -2,41 +2,49 @@ package com.springbootdocssourcecodes.springboot.Services;
 
 import com.springbootdocssourcecodes.springboot.DAOs.EmployeeDao;
 import com.springbootdocssourcecodes.springboot.Entities.Employee;
+import com.springbootdocssourcecodes.springboot.Repositories.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 
 //we can use @Transactional annotation on the class level as well
 @Service
 public class EmployeeServiceImpl implements EmployeeService{
-    private EmployeeDao employeeDao;
+    private EmployeeRepository employeeRepository;
     @Autowired
-    public EmployeeServiceImpl(EmployeeDao employeeDao) {
-        this.employeeDao = employeeDao;
+    public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
+        this.employeeRepository = employeeRepository;
     }
-
     @Override
-    @Transactional
     public Employee saveEmployee(Employee employee) {
-        return employeeDao.saveEmployee(employee);
+        return employeeRepository.save(employee);
     }
 
     @Override
     public Employee findEmployee(Long id) {
-        return employeeDao.readEmployee(id);
+        Optional<Employee> result = employeeRepository.findById(id);
+        Employee theEmployee = null;
+
+        if (result.isPresent()){
+            theEmployee = result.get();
+        }
+        else{
+            throw  new RuntimeException("Employee is not found.");
+        }
+        return theEmployee;
     }
 
     @Override
     public List<Employee> findAllEmployees() {
-        return employeeDao.readAllEmployees();
+        return employeeRepository.findAll();
     }
 
     @Override
-    @Transactional
     public void deleteEmployee(Long id) {
-        employeeDao.deleteEmployee(id);
+        employeeRepository.deleteById(id);
     }
 }

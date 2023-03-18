@@ -1,4 +1,4 @@
-package com.springbootdocssourcecodes.springboot.Exceptions;
+package com.springbootdocssourcecodes.springboot.Part2.Exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

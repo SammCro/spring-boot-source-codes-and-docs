@@ -1,6 +1,4 @@
-package com.springbootdocssourcecodes.springboot.Exceptions;
-
-import com.springbootdocssourcecodes.springboot.Entities.Student;
+package com.springbootdocssourcecodes.springboot.Part2.Exceptions;
 
 public class StudentErrorResponse {
     private int status;

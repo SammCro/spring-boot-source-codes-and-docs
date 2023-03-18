@@ -1,4 +1,4 @@
-package com.springbootdocssourcecodes.springboot.Exceptions;
+package com.springbootdocssourcecodes.springboot.Part2.Exceptions;
 
 public class StudentNotFoundException extends RuntimeException{
     public StudentNotFoundException(String message) {

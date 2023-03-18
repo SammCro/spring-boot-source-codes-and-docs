@@ -1,4 +1,4 @@
-package com.springbootdocssourcecodes.springboot.Entities;
+package com.springbootdocssourcecodes.springboot.Part2.Entities;
 
 public class Student {
     private String firstName;

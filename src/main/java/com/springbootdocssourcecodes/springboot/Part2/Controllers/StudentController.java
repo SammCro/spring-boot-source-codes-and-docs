@@ -1,11 +1,8 @@
-package com.springbootdocssourcecodes.springboot.Controllers;
+package com.springbootdocssourcecodes.springboot.Part2.Controllers;
 
 
-import com.springbootdocssourcecodes.springboot.Entities.Student;
-import com.springbootdocssourcecodes.springboot.Exceptions.StudentErrorResponse;
-import com.springbootdocssourcecodes.springboot.Exceptions.StudentNotFoundException;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import com.springbootdocssourcecodes.springboot.Part2.Entities.Student;
+import com.springbootdocssourcecodes.springboot.Part2.Exceptions.StudentNotFoundException;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.PostConstruct;

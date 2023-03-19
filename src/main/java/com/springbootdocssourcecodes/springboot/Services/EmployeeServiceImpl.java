@@ -1,7 +1,7 @@
-package com.springbootdocssourcecodes.springboot.Part3.Services;
+package com.springbootdocssourcecodes.springboot.Services;
 
-import com.springbootdocssourcecodes.springboot.Part3.Entities.Employee;
-import com.springbootdocssourcecodes.springboot.Part3.Repositories.EmployeeRepository;
+import com.springbootdocssourcecodes.springboot.Entities.Employee;
+import com.springbootdocssourcecodes.springboot.Repositories.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

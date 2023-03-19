@@ -1,6 +1,6 @@
-package com.springbootdocssourcecodes.springboot.Part3.DAOs;
+package com.springbootdocssourcecodes.springboot.DAOs;
 
-import com.springbootdocssourcecodes.springboot.Part3.Entities.Employee;
+import com.springbootdocssourcecodes.springboot.Entities.Employee;
 
 import java.util.List;
 

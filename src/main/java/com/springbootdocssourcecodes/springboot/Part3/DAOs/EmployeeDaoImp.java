@@ -1,9 +1,8 @@
-package com.springbootdocssourcecodes.springboot.DAOs;
+package com.springbootdocssourcecodes.springboot.Part3.DAOs;
 
-import com.springbootdocssourcecodes.springboot.Entities.Employee;
+import com.springbootdocssourcecodes.springboot.Part3.Entities.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;

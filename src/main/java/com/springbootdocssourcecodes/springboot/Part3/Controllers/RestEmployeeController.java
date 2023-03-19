@@ -1,9 +1,7 @@
-package com.springbootdocssourcecodes.springboot.Controllers;
+package com.springbootdocssourcecodes.springboot.Part3.Controllers;
 
-import com.springbootdocssourcecodes.springboot.DAOs.EmployeeDao;
-import com.springbootdocssourcecodes.springboot.Entities.Employee;
-import com.springbootdocssourcecodes.springboot.Services.EmployeeService;
-import com.springbootdocssourcecodes.springboot.Services.EmployeeServiceImpl;
+import com.springbootdocssourcecodes.springboot.Part3.Entities.Employee;
+import com.springbootdocssourcecodes.springboot.Part3.Services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

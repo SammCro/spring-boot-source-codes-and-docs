@@ -1,11 +1,9 @@
-package com.springbootdocssourcecodes.springboot.Services;
+package com.springbootdocssourcecodes.springboot.Part3.Services;
 
-import com.springbootdocssourcecodes.springboot.DAOs.EmployeeDao;
-import com.springbootdocssourcecodes.springboot.Entities.Employee;
-import com.springbootdocssourcecodes.springboot.Repositories.EmployeeRepository;
+import com.springbootdocssourcecodes.springboot.Part3.Entities.Employee;
+import com.springbootdocssourcecodes.springboot.Part3.Repositories.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package com.springbootdocssourcecodes.springboot.Entities;
+package com.springbootdocssourcecodes.springboot.Part3.Entities;
 
 import javax.persistence.*;
 

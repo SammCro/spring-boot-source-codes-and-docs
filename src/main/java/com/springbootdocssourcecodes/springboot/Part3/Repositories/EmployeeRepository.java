@@ -1,6 +1,6 @@
-package com.springbootdocssourcecodes.springboot.Repositories;
+package com.springbootdocssourcecodes.springboot.Part3.Repositories;
 
-import com.springbootdocssourcecodes.springboot.Entities.Employee;
+import com.springbootdocssourcecodes.springboot.Part3.Entities.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
